@@ -1,0 +1,43 @@
+﻿<Application x:Class="Layout.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Layout"
+             xmlns:viewModel="clr-namespace:Layout.MVM.ViewModel"
+             xmlns:view="clr-namespace:Layout.MVM.View"
+             StartupUri="MainWindow.xaml">
+    
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Theme/MenuButtonTheme.xaml"/>
+                <ResourceDictionary Source="Theme/StandardButtonTheme.xaml"/>
+                <ResourceDictionary Source="Theme/CloseButtonTheme.xaml"/>
+                <ResourceDictionary Source="Theme/CreateNewButtonTheme.xaml"/>
+                <ResourceDictionary Source="Theme/LayoutNameInputBox.xaml"/>
+                <ResourceDictionary Source="Theme/FilesListBoxTheme.xaml"/>
+                <ResourceDictionary Source="Theme/LayoutListScrollerTheme.xaml"/>
+                <ResourceDictionary Source="Theme/HomeButtonTheme.xaml"/>
+                <ResourceDictionary Source="Theme/EditLayoutButtonTheme.xaml"/>
+                <ResourceDictionary Source="Theme/SettingsTheme.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+
+            <DataTemplate DataType="{x:Type viewModel:HomeViewModel}">
+                <view:HomeView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModel:CreateNewViewModel}">
+                <view:CreateNewView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModel:LayoutViewModel}">
+                <view:LayoutView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModel:EditLayoutViewModel}">
+                <view:EditLayoutView/>
+            </DataTemplate>
+
+        </ResourceDictionary>
+    </Application.Resources>
+
+</Application>

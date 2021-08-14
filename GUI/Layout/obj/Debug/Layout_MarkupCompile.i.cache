@@ -1,0 +1,20 @@
+﻿Layout
+
+
+winexe
+C#
+.cs
+C:\Users\alex\Documents\Desktop\Layout Project\GUI\Layout\obj\Debug\
+Layout
+none
+false
+DEBUG;TRACE
+C:\Users\alex\Documents\Desktop\Layout Project\GUI\Layout\App.xaml
+16516251081
+
+21-775327922
+28537185441
+MainWindow.xaml;MVM\View\CreateNewView.xaml;MVM\View\EditLayoutView.xaml;MVM\View\HomeView.xaml;MVM\View\LayoutView.xaml;Theme\CloseButtonTheme.xaml;Theme\CreateNewButtonTheme.xaml;Theme\EditLayoutButtonTheme.xaml;Theme\FilesListBoxTheme.xaml;Theme\HomeButtonTheme.xaml;Theme\LayoutListScrollerTheme.xaml;Theme\LayoutNameInputBox.xaml;Theme\MenuButtonTheme.xaml;Theme\PageButtonTheme.xaml;Theme\SettingsTheme.xaml;Theme\StandardButtonTheme.xaml;
+
+False
+
