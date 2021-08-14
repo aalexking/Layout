@@ -1,0 +1,46 @@
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.foreground-text {
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0, 0.1); /* Black w/opacity/see-through */
+    color: white;
+    font-weight: bold;
+    border: 3px solid #f1f1f1;
+    position: absolute;
+    
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    
+    z-index: 2;
+    width: 80%;
+    padding: 20px;
+    
+}
+
+.gui-image {
+
+    width: 50%;
+    height: 50%;
+
+}
+
+.title {
+
+    font-weight: bold;
+    color: white;
+    position: absolute;
+
+    top: 10%;
+    left: 22%;
+    transform: translate(-50%, -40%);
+
+    z-index: 2;
+    padding: 20px;
+
+}
+
+

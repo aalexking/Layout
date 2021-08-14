@@ -1,0 +1,28 @@
+/* Styles that affect the background image such as parallax */
+
+.bg-image {
+    background-image: url("../images/Untitled1.png");
+
+    filter: blur(3px);
+    -webkit-filter: blur(3px);
+
+    height: auto;
+    width: auto;
+
+    display: flex;
+    transform: scale(1.1);
+    background-repeat: repeat;
+    /*background-attachment: fixed;*/
+}
+
+
+
+
+
+/* If using mobile device disable parallax effect */
+
+@media only screen and (max-device-width: 1366px) {
+    .parallax {
+      background-attachment: scroll;
+    }
+  }
