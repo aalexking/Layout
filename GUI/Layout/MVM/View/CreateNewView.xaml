@@ -9,7 +9,7 @@
              d:DesignHeight="565.6" d:DesignWidth="700"
              Background="Transparent">
 
-    <Border CornerRadius="10" Background="#36334d">
+    <Border CornerRadius="5" Background="#36334d">
 
         <Grid>
 

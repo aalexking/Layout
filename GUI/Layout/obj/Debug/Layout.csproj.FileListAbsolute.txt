@@ -86,3 +86,47 @@ C:\Users\alex\Documents\Desktop\Layout Project\GUI\Layout\obj\Debug\Layout.appli
 C:\Users\alex\Documents\Desktop\Layout Project\GUI\Layout\obj\Debug\Layout.csproj.CopyComplete
 C:\Users\alex\Documents\Desktop\Layout Project\GUI\Layout\obj\Debug\Layout.exe
 C:\Users\alex\Documents\Desktop\Layout Project\GUI\Layout\obj\Debug\Layout.pdb
+D:\Layout\GUI\Layout\obj\Debug\Layout.csproj.AssemblyReference.cache
+D:\Layout\GUI\Layout\obj\Debug\Theme\CloseButtonTheme.baml
+D:\Layout\GUI\Layout\obj\Debug\Theme\CreateNewButtonTheme.baml
+D:\Layout\GUI\Layout\obj\Debug\Theme\EditLayoutButtonTheme.baml
+D:\Layout\GUI\Layout\obj\Debug\Theme\FilesListBoxTheme.baml
+D:\Layout\GUI\Layout\obj\Debug\Theme\HomeButtonTheme.baml
+D:\Layout\GUI\Layout\obj\Debug\Theme\LayoutListScrollerTheme.baml
+D:\Layout\GUI\Layout\obj\Debug\Theme\LayoutNameInputBox.baml
+D:\Layout\GUI\Layout\obj\Debug\Theme\MenuButtonTheme.baml
+D:\Layout\GUI\Layout\obj\Debug\Theme\PageButtonTheme.baml
+D:\Layout\GUI\Layout\obj\Debug\Theme\SettingsTheme.baml
+D:\Layout\GUI\Layout\obj\Debug\Theme\StandardButtonTheme.baml
+D:\Layout\GUI\Layout\obj\Debug\MainWindow.g.cs
+D:\Layout\GUI\Layout\obj\Debug\MVM\View\CreateNewView.g.cs
+D:\Layout\GUI\Layout\obj\Debug\MVM\View\EditLayoutView.g.cs
+D:\Layout\GUI\Layout\obj\Debug\MVM\View\HomeView.g.cs
+D:\Layout\GUI\Layout\obj\Debug\MVM\View\LayoutView.g.cs
+D:\Layout\GUI\Layout\obj\Debug\App.g.cs
+D:\Layout\GUI\Layout\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\Layout\GUI\Layout\obj\Debug\Layout_MarkupCompile.cache
+D:\Layout\GUI\Layout\obj\Debug\Layout_MarkupCompile.lref
+D:\Layout\GUI\Layout\obj\Debug\Layout.exe
+D:\Layout\GUI\Layout\obj\Debug\Layout.pdb
+D:\Layout\GUI\Layout\bin\Debug\Layout.exe.config
+D:\Layout\GUI\Layout\bin\Debug\Layout.exe.manifest
+D:\Layout\GUI\Layout\bin\Debug\Layout.application
+D:\Layout\GUI\Layout\bin\Debug\Layout.exe
+D:\Layout\GUI\Layout\bin\Debug\Layout.pdb
+D:\Layout\GUI\Layout\bin\Debug\Newtonsoft.Json.dll
+D:\Layout\GUI\Layout\bin\Debug\Newtonsoft.Json.xml
+D:\Layout\GUI\Layout\obj\Debug\App.baml
+D:\Layout\GUI\Layout\obj\Debug\MainWindow.baml
+D:\Layout\GUI\Layout\obj\Debug\MVM\View\CreateNewView.baml
+D:\Layout\GUI\Layout\obj\Debug\MVM\View\EditLayoutView.baml
+D:\Layout\GUI\Layout\obj\Debug\MVM\View\HomeView.baml
+D:\Layout\GUI\Layout\obj\Debug\MVM\View\LayoutView.baml
+D:\Layout\GUI\Layout\obj\Debug\Layout.g.resources
+D:\Layout\GUI\Layout\obj\Debug\Layout.Properties.Resources.resources
+D:\Layout\GUI\Layout\obj\Debug\Layout.csproj.GenerateResource.cache
+D:\Layout\GUI\Layout\obj\Debug\Layout.csproj.CoreCompileInputs.cache
+D:\Layout\GUI\Layout\obj\Debug\Layout.TrustInfo.xml
+D:\Layout\GUI\Layout\obj\Debug\Layout.exe.manifest
+D:\Layout\GUI\Layout\obj\Debug\Layout.application
+D:\Layout\GUI\Layout\obj\Debug\Layout.csproj.CopyComplete

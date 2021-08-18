@@ -140,10 +140,15 @@ namespace Layout
             
 
         }
+
         public void UpdateExistingLayout(string newLayoutName, string oldLayoutName)
         {
             UncheckAllButtons();
 
+            //this.LayoutList.Children.Select(element => element is RadioButton ? Console.WriteLine("true") : Console.WriteLine("fasle") );
+
+
+            /*
             foreach (FrameworkElement element in this.LayoutList.Children)
             {
 
@@ -163,6 +168,7 @@ namespace Layout
                 }
 
             }
+            */
 
         }
 

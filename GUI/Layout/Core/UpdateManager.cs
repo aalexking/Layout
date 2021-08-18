@@ -21,6 +21,7 @@ namespace Layout.Core
             if (currentVersion == null)
             {
                 // Decide whether application shouldnt open if version = null
+                // if version is null, application should just skip update
 
                 //Application.Current.Shutdown();
                 return;
