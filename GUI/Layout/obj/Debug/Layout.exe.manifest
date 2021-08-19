@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Layout.exe" size="526264">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Layout.exe" size="526776">
       <assemblyIdentity name="Layout" version="1.0.1.5" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>NILqq80uBF/AKrxE4MAKURTdkTu5bi38us5Cfy7cG6Y=</dsig:DigestValue>
+        <dsig:DigestValue>aWiyHcLIxt5rcMhlzmLtRW8yU+nA4F39y8KZV6aLj2A=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

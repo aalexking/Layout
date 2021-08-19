@@ -9,17 +9,17 @@ namespace Layout.Core
     public class WindowRectClass
     {
 
-        public int Left { get; set; }
-        public int Top { get; set; }
-        public int Right { get; set; }
-        public int Bottom { get; set; }
+        public int X { get; set; }
+        public int Y { get; set; }
+        public int Width { get; set; }
+        public int Height { get; set; }
 
-        public WindowRectClass(int left, int top, int right, int bottom)
+        public WindowRectClass(int x, int y, int width, int height)
         {
-            this.Left = left;
-            this.Top = top;
-            this.Right = right;
-            this.Bottom = bottom;
+            this.X = x;
+            this.Y = y;
+            this.Width = width;
+            this.Height = height;
         }
 
 

@@ -42,10 +42,10 @@ namespace Layout.MVM.View
         
         public struct Rect
         {
-            public int Left { get; set; }
-            public int Top { get; set; }
-            public int Right { get; set; }
-            public int Bottom { get; set; }
+            public int X { get; set; }
+            public int Y { get; set; }
+            public int Width { get; set; }
+            public int Height { get; set; }
 
         }
         
@@ -241,9 +241,9 @@ namespace Layout.MVM.View
                             Rect rect = new Rect();
                             GetWindowRect(ptr, ref rect);
 
-                            
+                            Console.WriteLine($"Name: {name} X: {rect.X} Y: {rect.Y} Width: {rect.Width} Height: {rect.Height}");
 
-                            WindowRectClass appWindow = new WindowRectClass(rect.Left, rect.Top, rect.Right, rect.Bottom);
+                            WindowRectClass appWindow = new WindowRectClass(rect.X, rect.Y, rect.Width, rect.Height);
 
                             app.Item1 = name;
                             app.Item2 = process.MainModule.FileVersionInfo.FileName;

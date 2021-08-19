@@ -30,7 +30,7 @@ namespace Layout
     {
 
         [DllImport("user32.dll")]
-        public static extern bool SetWindowPos(IntPtr hWnd, IntPtr hWndInsertAfter, int left, int top, int right, int bottom, int uFlags);
+        public static extern bool SetWindowPos(IntPtr hWnd, IntPtr hWndInsertAfter, int x, int y, int width, int height, int uFlags);
 
         private const int SWP_NOSIZE = 0x0001;
         private const int SWP_NOZORDER = 0x0004;
@@ -45,7 +45,6 @@ namespace Layout
 
             LoadPresets();
 
-
             //lightButton.Click += Button_Click();
             
         }
@@ -53,6 +52,8 @@ namespace Layout
         private void LoadPresets()
         {
             List<LayoutPreset> layouts = SaveSystem.LoadPresets();
+
+            //layouts.Select(layout => )
 
             if (layouts != null)
             {
@@ -69,13 +70,14 @@ namespace Layout
         {
 
             var point = Mouse.GetPosition(MainWindowGrid);
+            
 
             // Check of left mouse button pressed
             if (e.LeftButton == MouseButtonState.Pressed)
             {
 
                 // Mouse clicked within first row
-                if (point.Y <= MainWindowGrid.RowDefinitions[0].ActualHeight)
+                if (point.Y <= 30)
                 {
 
                     // Check if close button pressed
@@ -216,15 +218,25 @@ namespace Layout
                         (string, string, WindowRectClass, string) app = preset.GetApps()[j];
 
                         Process.Start(@"" + app.Item2);
-                        /*
-                        if (app.Item3.Equals(null))
+                        
+                        if (!app.Item3.Equals(null))
                         {
-                            // File
-                            Process.Start(@"" + app.Item2);
+                            Process currentProcess = Process.GetProcessesByName(app.Item4).FirstOrDefault();
+
+                            WindowRectClass dim = app.Item3;
+
+                            if (currentProcess == null)
+                                continue;
+
+                            //Console.WriteLine($"Left: {app.Item3.Left} Top: {app.Item3.Top} Right: {app.Item3.Right} Bottom: {app.Item3.Bottom}");
+                            SetWindowPos(currentProcess.MainWindowHandle, IntPtr.Zero, dim.X, dim.Y, dim.Width, dim.Height, SWP_NOZORDER);
+                            
                         }
+                        /*
                         else
                         {
                             // Application
+
                             Process currentProcess = Process.GetProcessesByName(app.Item4).FirstOrDefault();
 
                             if (currentProcess == null)
@@ -232,7 +244,7 @@ namespace Layout
 
                             // TODO: Set window position and size
 
-                            SetWindowPos(currentProcess.MainWindowHandle, IntPtr.Zero, app.Item3.Left, app.Item3.Top, app.Item3.Right, app.Item3.Bottom, SWP_SHOWWINDOW);
+                            
 
 
                         }
