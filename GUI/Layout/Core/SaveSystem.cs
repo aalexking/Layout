@@ -23,10 +23,10 @@ namespace Layout.Core
             var file = completePath + @"\presets.json";
 
             if (!File.Exists(file))
-            {
+            
                 System.IO.Directory.CreateDirectory(completePath);
 
-            }
+            
 
             string json = JsonConvert.SerializeObject(preset);
 
@@ -90,10 +90,10 @@ namespace Layout.Core
                     line = line.Trim();
 
                     if (line != "")
-                    {
+                    
                         list.Add(JsonConvert.DeserializeObject<LayoutPreset>(line));
 
-                    }
+                    
 
                 }
 
@@ -102,9 +102,9 @@ namespace Layout.Core
                 
             }
             else
-            {
+            
                 return null;
-            }
+            
             
         }
         

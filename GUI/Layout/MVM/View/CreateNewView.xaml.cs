@@ -69,9 +69,8 @@ namespace Layout.MVM.View
             string input = this.LayoutNameInput.Text;
 
             if ( (input.Trim() == "") || (this.CheckIfLayoutNameExists(input)))
-            {
                 return;
-            }
+            
 
             if (appsList.Count != 0)
             {
@@ -171,10 +170,11 @@ namespace Layout.MVM.View
                 {
 
                     if (layout.GetPresetName().Equals(name))
-                    {
+                    
                         return true;
-                    }
+                    
                 }
+                
             }
 
 
@@ -190,6 +190,9 @@ namespace Layout.MVM.View
         {
 
             ManagementObjectSearcher mos = new ManagementObjectSearcher("SELECT * FROM Win32_Product");
+
+            
+
             foreach (ManagementObject mo in mos.Get())
             {
                 //Console.WriteLine(mo["Name"]);
@@ -216,9 +219,8 @@ namespace Layout.MVM.View
             ignoredApps.Add("Layout");
             ignoredApps.Add("Application Frame Host");
 
-            foreach (Process process in processes)
+            processes.ToList().ForEach(process =>
             {
-
                 if (!String.IsNullOrEmpty(process.MainWindowTitle))
                 {
 
@@ -228,9 +230,8 @@ namespace Layout.MVM.View
                     if (!String.IsNullOrWhiteSpace(name))
                     {
                         if (name.Substring(name.Length-4) == ".exe")
-                        {
                             name = name.Substring(0, name.Length - 4);
-                        }
+                        
 
 
                         if (!ignoredApps.Contains(name))
@@ -254,12 +255,9 @@ namespace Layout.MVM.View
 
 
                         }
-
-
                     }
-                   
                 }
-            }
+            });
 
 
         }

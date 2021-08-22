@@ -57,10 +57,15 @@ namespace Layout
 
             if (layouts != null)
             {
+
+                layouts.ForEach(layout => CreateNewLayoutSection(layout));
+
+                /*
                 foreach (LayoutPreset layout in layouts)
                 {
                     CreateNewLayoutSection(layout);
                 }
+                */
             }
 
 
@@ -181,9 +186,13 @@ namespace Layout
 
             string selectedOption = "";
 
+
             foreach (FrameworkElement element in this.LayoutList.Children)
             {
 
+                selectedOption = (element is RadioButton) ? ((((RadioButton)element).IsChecked == true) ? ((RadioButton)element).Content.ToString() : "") : "";
+
+                /*
                 if (element is RadioButton)
                 {
 
@@ -195,7 +204,7 @@ namespace Layout
 
 
                 }
-
+                */
             }
 
             List<LayoutPreset> apps = SaveSystem.LoadPresets();
@@ -295,17 +304,11 @@ namespace Layout
         {
             foreach (FrameworkElement element in this.LayoutList.Children)
             {
-
                 if (element is RadioButton)
-                {
 
                     if (((RadioButton)element).IsChecked == true)
-                    {
+
                         ((RadioButton)element).IsChecked = false;
-                    }
-
-
-                }
 
             }
         }
@@ -332,10 +335,9 @@ namespace Layout
                 foreach (FrameworkElement element in this.LayoutList.Children)
                 {
                     if (element is RadioButton)
-                    {
                         ((RadioButton)element).Foreground = Brushes.Black;
 
-                    }
+                    
                 }
 
               
@@ -365,18 +367,7 @@ namespace Layout
 
             // Display Settings Box
 
-            if (this.SettingsMenu.Visibility.Equals(Visibility.Hidden))
-            {
-                this.SettingsMenu.Visibility = Visibility.Visible;
-
-                AddHandler();
-
-            }
-            else
-            {
-                this.SettingsMenu.Visibility = Visibility.Hidden;
-            }
-            
+            this.SettingsMenu.Visibility = this.SettingsMenu.Visibility.Equals(Visibility.Hidden) ? Visibility.Visible : Visibility.Hidden;
 
 
         }
@@ -384,10 +375,6 @@ namespace Layout
         private void HomeButton_Click(object sender, RoutedEventArgs e)
         {
 
-        }
-        private void AddHandler()
-        {
-            AddHandler(Mouse.PreviewMouseDownOutsideCapturedElementEvent, new MouseButtonEventHandler(HandleClickOutsideOfControl), true);
         }
 
         private void HandleClickOutsideOfControl(object sender, MouseButtonEventArgs e)

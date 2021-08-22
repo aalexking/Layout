@@ -75,7 +75,7 @@ namespace Layout.MVM.View
                 // (test.Name);
 
                 if (element is RadioButton)
-                {
+                
 
                     if (((RadioButton)element).IsChecked == true)
                     {
@@ -85,7 +85,7 @@ namespace Layout.MVM.View
                     }
 
 
-                }
+                
 
             }
 
@@ -101,11 +101,14 @@ namespace Layout.MVM.View
                     oldApps = apps;
                     newApps = apps;
 
+                    apps.ForEach(app => this.ListOfFiles.Items.Add(app.Item1));
+
+                    /*
                     foreach ((string, string, WindowRectClass, string) app in apps)
                     {
                         this.ListOfFiles.Items.Add(app.Item1);
                     }
-
+                    */
                     break;
                 }
             }
@@ -133,7 +136,7 @@ namespace Layout.MVM.View
             {
                 //for (int i = 0; i < openFileDialog1.)
 
-                foreach (string file in openFileDialog1.FileNames)
+                openFileDialog1.FileNames.ToList().ForEach(file =>
                 {
                     try
                     {
@@ -165,14 +168,14 @@ namespace Layout.MVM.View
                     catch (Exception ex)
                     {
                         Console.WriteLine(ex.ToString());
-                        continue;
                     }
-                }
+                });
+
             }
             else
-            {
+            
                 return;
-            }
+            
         }
 
         private void CaptureDesktopButton_Click(object sender, RoutedEventArgs e)
@@ -185,6 +188,8 @@ namespace Layout.MVM.View
             ignoredApps.Add("Layout");
             ignoredApps.Add("Application Frame Host");
 
+           
+
             foreach (Process process in processes)
             {
                 if (!String.IsNullOrEmpty(process.MainWindowTitle))
@@ -196,9 +201,9 @@ namespace Layout.MVM.View
                     if (!String.IsNullOrWhiteSpace(name))
                     {
                         if (name.Substring(name.Length - 4) == ".exe")
-                        {
+                        
                             name = name.Substring(0, name.Length - 4);
-                        }
+                        
 
 
                         if (!ignoredApps.Contains(name))
@@ -245,10 +250,9 @@ namespace Layout.MVM.View
             
 
             if ((input.Trim() == "") || (this.CheckIfLayoutNameExists(input, true)))
-            {
-                 
+               
                 return;
-            }
+            
 
             if (newApps.Count != 0)
             {
@@ -283,16 +287,16 @@ namespace Layout.MVM.View
                     // (test.Name);
 
                     if (element is RadioButton)
-                    {
+                    
 
                         if (((RadioButton)element).IsChecked == true)
-                        {
+                        
 
                             break;
 
-                        }
+                        
 
-                    }
+                    
 
                     selectedPosition++;
 
@@ -314,9 +318,9 @@ namespace Layout.MVM.View
                 {
 
                     if (currentPosition.Equals(selectedPosition))
-                    {
+                    
                         return false;
-                    }
+                    
 
                     return true;
                 }
@@ -349,16 +353,13 @@ namespace Layout.MVM.View
                         // Remove button from list
                         ((MainWindow)System.Windows.Application.Current.MainWindow).LayoutList.Children.Remove(element);
 
-                        // Remove preset from file
-                        foreach (LayoutPreset preset in presets)
+                        presets.ForEach(preset =>
                         {
                             if (preset.GetPresetName().Equals(((RadioButton)element).Content))
-                            {
+                          
                                 SaveSystem.DeletePreset(preset);
-                            }
-                        }
+                        });
 
-                        // ("Test");
                         ((MainWindow)System.Windows.Application.Current.MainWindow).EditLayoutButton.Command.Execute(this);
 
                         break;
@@ -376,9 +377,9 @@ namespace Layout.MVM.View
             string input = this.LayoutNameInput.Text;
 
             if ((input.Trim() == "") || (this.CheckIfLayoutNameExists(input, false)))
-            {
+            
                 return;
-            }
+            
 
             if (newApps.Count != 0)
             {
