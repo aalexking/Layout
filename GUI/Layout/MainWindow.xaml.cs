@@ -53,21 +53,7 @@ namespace Layout
         {
             List<LayoutPreset> layouts = SaveSystem.LoadPresets();
 
-            //layouts.Select(layout => )
-
-            if (layouts != null)
-            {
-
-                layouts.ForEach(layout => CreateNewLayoutSection(layout));
-
-                /*
-                foreach (LayoutPreset layout in layouts)
-                {
-                    CreateNewLayoutSection(layout);
-                }
-                */
-            }
-
+            layouts?.ForEach(layout => CreateNewLayoutSection(layout));
 
         }
 
