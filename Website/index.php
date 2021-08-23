@@ -27,7 +27,7 @@
         <!-- PHP includes -->
         <?php
             include_once './assets/includes/menu-bar.php';
-            include_once './assets/includes/background.php';
+            /*include_once './assets/includes/background.php';*/
         ?>
         
         <!-- --------------------------------- -->
@@ -37,6 +37,7 @@
 
         <!--<script>var rellax = new Rellax('.rellax');</script>-->
 
+        <!--
         <div id = "main-section" class = "foreground-text">
 
             <p>A short-ish description of the software will be here, the description should be appealing and capture user attention with features and ease. But the length of the decription should not immitidate users.</p>
@@ -64,7 +65,7 @@
             <p> placeholder.... </p>
             
         </div>
-
+        -->
 
 
 

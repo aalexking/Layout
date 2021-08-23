@@ -16,18 +16,4 @@
 <script src = "./Assets/Scripts/menu-functions.js"></script>
 <link rel = "stylesheet" href = "./Assets/Styles/menu-styles.css">
 -->
-<style>
-/*--------------------------------------------------------------------*/
-/* Hides all menu buttons except 'first-child' which is 'Home'*/
-/*The nth-child needs to detect which page is active, and that variable needs to be passed in */
-  @media screen and (max-width: 565px) {
-    .menuBar a:not(:nth-child(<?php echo $activePage ?>)) {
-      display: none;
-    }
-  /* Simultaneously displays the bars icon */
-    .menuBar a.icon {
-      float: right;
-      display: block;
-    }
-  }
-</style>
+

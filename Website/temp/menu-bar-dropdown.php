@@ -106,7 +106,7 @@
 				}
 				.topnav.responsive a {
 					float: none;
-					display: none;
+					display: block;
 					text-align: left;
 				}
 				.topnav.responsive .dropdown {float: none;}

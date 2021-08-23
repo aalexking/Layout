@@ -164,6 +164,7 @@ namespace Layout.MVM.View
             
             List<LayoutPreset> list = SaveSystem.LoadPresets();
 
+            // 'list is not null' expressions not available in c# v7.3
             if (list != null)
             {
                 foreach (LayoutPreset layout in list)
