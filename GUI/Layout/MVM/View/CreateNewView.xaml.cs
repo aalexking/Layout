@@ -39,7 +39,6 @@ namespace Layout.MVM.View
         [DllImport("user32.dll")]
         public static extern bool GetWindowRect(IntPtr hwnd, ref Rect rectangle);
 
-        
         public struct Rect
         {
             public int X { get; set; }

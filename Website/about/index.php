@@ -11,27 +11,23 @@
         <meta name = "author" content = "Alex">
         <meta name = "title" content = "Layout Software - About">
 
-        <link rel = "stylesheet" href = "../assets/styles/home-styles.css">
-        <link rel = "stylesheet" href = "../assets/styles/about-styles.css">
-        <link rel = "stylesheet" href = "../assets/styles/bg-styles.css">
-        <link rel = "stylesheet" href = "../assets/styles/menu-styles.css">
+        <link rel = "stylesheet" href = "/assets/styles/home-styles.css">
+        <link rel = "stylesheet" href = "/assets/styles/about-styles.css">
+        <link rel = "stylesheet" href = "/assets/styles/bg-styles.css">
+        <link rel = "stylesheet" href = "/assets/styles/menu-styles.css">
+        <link rel = "stylesheet" href = "/assets/styles/footer-styles.css">
 
-        <script src = "../assets/scripts/menu-functions.js"></script>
-        <script src = "../assets/scripts/home-functions.js"></script>
-        <script src = "../assets/scripts/rellax.min.js"></script>
-        <script src = "../assets/scripts/about-functions.js"></script>
+        <script src = "/assets/scripts/menu-functions.js"></script>
+        <script src = "/assets/scripts/home-functions.js"></script>
+        <script src = "/assets/scripts/rellax.min.js"></script>
+        <script src = "/assets/scripts/about-functions.js"></script>
 
     </head>
-    <body onresize="ReloadPage()">
+    <body>
 
         <?php
             include_once '../assets/includes/menu-bar.php';
-            include_once '../assets/includes/background.php';
         ?>
-
-        <h2 class = "title">About</h2>
-
-
 
 
 
@@ -39,7 +35,7 @@
 
 
         <?php
-            include_once '../assets/includes/credits.php';
+            include_once '../assets/includes/footer.php';
         ?>
 
     </body>

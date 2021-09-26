@@ -32,4 +32,4 @@
     
 </div>
 
-<script>var rellax = new Rellax('.rellax');</script>
+<script>//var rellax = new Rellax('.rellax');</script>

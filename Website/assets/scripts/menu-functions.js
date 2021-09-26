@@ -1,5 +1,8 @@
 
+// IMPORTANT: onload function don't see mto work as they are called before include function is processed
+
 // Function executed after bars icon is clicked
+/*
 function menuFunction() {
 
   var menuElement = document.getElementById("myMenuBar");
@@ -34,11 +37,34 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 })
-
+*/
 // Function called when page is loaded
+/*
 window.onload = function HighlightActivePage() {
 
+  console.log("test");
+  var pageID = "";
+
+  switch(document.title) {
+    case "Download":
+      pageID = "nv_1121";
+      break;
+
+    case "Donate":
+      pageID = "nv_1122";
+      break;
+
+    case "About":
+      pageID = "nv_1123";
+      break;
+
+    default:
+      break;
+  }
+
   // Uses the current page title to set the active menu button
-  document.getElementById(document.title).classList.add("active");
+  document.getElementById(pageID).classList.add("active");
 
 }
+*/
+

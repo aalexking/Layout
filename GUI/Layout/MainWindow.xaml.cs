@@ -208,25 +208,32 @@ namespace Layout
 
                         // TODO: Check if process is already open
                        
-
-
-                        (string, string, WindowRectClass, string) app = preset.GetApps()[j];
-
-                        Process.Start(@"" + app.Item2);
-                        
-                        if (!app.Item3.Equals(null))
+                        try
                         {
-                            Process currentProcess = Process.GetProcessesByName(app.Item4).FirstOrDefault();
+                            (string, string, WindowRectClass, string) app = preset.GetApps()[j];
 
-                            WindowRectClass dim = app.Item3;
+                            Process.Start(@"" + app.Item2);
+                        
+                            if (!app.Item3.Equals(null))
+                            {
+                                Process currentProcess = Process.GetProcessesByName(app.Item4).FirstOrDefault();
 
-                            if (currentProcess == null)
-                                continue;
+                                WindowRectClass dim = app.Item3;
 
-                            //Console.WriteLine($"Left: {app.Item3.Left} Top: {app.Item3.Top} Right: {app.Item3.Right} Bottom: {app.Item3.Bottom}");
-                            SetWindowPos(currentProcess.MainWindowHandle, IntPtr.Zero, dim.X, dim.Y, dim.Width, dim.Height, SWP_NOZORDER);
+                                if (currentProcess == null)
+                                    continue;
+
+                                //Console.WriteLine($"Left: {app.Item3.Left} Top: {app.Item3.Top} Right: {app.Item3.Right} Bottom: {app.Item3.Bottom}");
+                                SetWindowPos(currentProcess.MainWindowHandle, IntPtr.Zero, dim.X, dim.Y, dim.Width, dim.Height, SWP_NOZORDER);
                             
+                            }
                         }
+                        catch(Exception ex)
+                        {
+                            Console.WriteLine(ex.ToString());
+                        }
+
+
                         /*
                         else
                         {
