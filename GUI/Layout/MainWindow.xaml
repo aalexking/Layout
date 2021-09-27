@@ -101,8 +101,8 @@
                 <RadioButton Name="CloseButton" Content="X" Style="{StaticResource CloseButtonTheme}" Foreground="White" Margin="3,0,3,0" Width="30" Height="28" VerticalAlignment="top" FontWeight="Bold" FontSize="28"/>
                 -->
 
-
-                <Image  x:Name="SettingsButton" Source="/Images/settings_white.png" Width="30" Margin="0,0,3,0" Height="19" Visibility="Hidden"/>
+                <!--Put both of these in button tags so that hover and onclick highlighting can be implemented-->
+                <Image  x:Name="SettingsButton" Source="/Images/settings_white.png" Width="30" Margin="0,0,3,0" HorizontalAlignment="Center" VerticalAlignment="Top"  Height="19" Visibility="Visible"/>
                 <TextBlock x:Name="CloseButton" Text="X" Foreground="white" FontSize="20" FontWeight="Bold" Margin="0,0,3,0" Width="25" TextAlignment="Center"/>
 
             </StackPanel>

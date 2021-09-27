@@ -72,9 +72,9 @@ namespace Layout
                 {
 
                     // Check if close button pressed
-                    if (this.CloseButton.Visibility.Equals(Visibility.Visible))
+                    if ((point.X > (MainWindowGrid.ActualWidth - (CloseButton.ActualWidth + CloseButton.Margin.Right))) && (point.X < (MainWindowGrid.ActualWidth - CloseButton.Margin.Right)))
                     {
-                        if ((point.X > (MainWindowGrid.ActualWidth - (CloseButton.ActualWidth + CloseButton.Margin.Right))) && (point.X < (MainWindowGrid.ActualWidth - CloseButton.Margin.Right)))
+                        if (this.CloseButton.Visibility.Equals(Visibility.Visible))
                         {
                             CloseButton_Clicked();
                             return;
@@ -82,11 +82,12 @@ namespace Layout
                             
                     }
                     // Check if settings button pressed
-                    else if (this.SettingsButton.Visibility.Equals(Visibility.Visible))
+                    else if ((point.X < (MainWindowGrid.ActualWidth - (CloseButton.ActualWidth + CloseButton.Margin.Right))) && (point.X > (MainWindowGrid.ActualWidth - (CloseButton.ActualWidth + CloseButton.Margin.Right + SettingsButton.ActualWidth + SettingsButton.Margin.Right))))
                     {
-                        if ((point.X < (MainWindowGrid.ActualWidth - (CloseButton.ActualWidth + CloseButton.Margin.Right))) && (point.X > (MainWindowGrid.ActualWidth - (CloseButton.ActualWidth + CloseButton.Margin.Right + SettingsButton.ActualWidth + SettingsButton.Margin.Right))))
+                        if (this.SettingsButton.Visibility.Equals(Visibility.Visible))
                         {
-                            SettingsButton_Clicked();
+                            //SettingsButton_Clicked();
+                            test();
                             return;
                         }
                         
@@ -100,6 +101,8 @@ namespace Layout
             }
 
         }
+
+
 
         private void CreateNewButton_Clicked(object sender, RoutedEventArgs e)
         {
@@ -163,6 +166,17 @@ namespace Layout
             }
             */
 
+        }
+
+        void test()
+        {
+            Console.WriteLine("test");
+
+            Process currentProcess = Process.GetProcessesByName("chrome").FirstOrDefault();
+
+            WindowRectClass dim = new WindowRectClass(1023, 5, 1926, 533);
+
+            SetWindowPos(currentProcess.MainWindowHandle, IntPtr.Zero, dim.X, dim.Y, dim.Width, dim.Height, SWP_NOZORDER);
         }
 
         private void ExecuteLayout(object sender, EventArgs e)
