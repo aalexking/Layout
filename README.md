@@ -7,6 +7,10 @@
 * [License](#license)
 * [Usage](#usage)
 
+## General Information
+
+'Preset' - Term used to specify individual saves
+
 ## Installation
 
 From Website:
@@ -23,13 +27,19 @@ From Github:
 
 ## Setup
 
+After the software has been successfully installed, you are able to immediatly begin [using](#usage) the software and creating your own presets
+
 ## License
 
-[Apache License](https://github.com/aalexking/Layout/blob/main/LICENSE)
+[Apache License 2.0](https://github.com/aalexking/Layout/blob/main/LICENSE)
 
 ## Usage
 
 ## Features
+
+* Create, copy, modify and save your layout presets
+* Saves the position and size of every application
+* 
 
 
 
