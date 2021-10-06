@@ -25,6 +25,8 @@ From Github:
 
 ## License
 
+[Apache License](https://github.com/aalexking/Layout/blob/main/LICENSE)
+
 ## Usage
 
 ## Features
