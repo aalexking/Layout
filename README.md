@@ -1,11 +1,14 @@
 # Layout <img src="https://travis-ci.com/pr4k/howto.svg?branch=master" alt="Build">
 
 ## Contents
+
+* [General Information](#general-information)
 * [Installation](#installation)
 * [System Requirements](#system-requirements)
 * [Setup](#setup)
 * [License](#license)
 * [Usage](#usage)
+* [Features](#features)
 
 ## General Information
 
@@ -31,7 +34,7 @@ After the software has been successfully installed, you are able to immediatly b
 
 ## License
 
-[Apache License 2.0](https://github.com/aalexking/Layout/blob/main/LICENSE)
+This software is under the [Apache License 2.0](https://github.com/aalexking/Layout/blob/main/LICENSE)
 
 ## Usage
 
