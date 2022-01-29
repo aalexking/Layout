@@ -17,6 +17,7 @@ using Layout.MVM.ViewModel;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
 using System.Management;
+using Layout.Static;
 
 namespace Layout
 {
@@ -28,15 +29,16 @@ namespace Layout
     // TODO: Create custom file (similar to .exe) which can store LayoutPreset's and when double-clicked opens windows - Software then only has to execute files rather than manually doing it everytime
     public partial class MainWindow : Window
     {
-
+        /*
         [DllImport("user32.dll")]
         public static extern bool SetWindowPos(IntPtr hWnd, IntPtr hWndInsertAfter, int x, int y, int width, int height, int uFlags);
 
         private const int SWP_NOSIZE = 0x0001;
         private const int SWP_NOZORDER = 0x0004;
         private const int SWP_SHOWWINDOW = 0x0040;
-
+        */
         private bool darkTheme = true;
+
         public MainWindow()
         {
             UpdateManager.CheckForUpdates();
@@ -174,9 +176,12 @@ namespace Layout
 
             Process currentProcess = Process.GetProcessesByName("chrome").FirstOrDefault();
 
-            WindowRectClass dim = new WindowRectClass(1023, 5, 1926, 533);
+            WindowRectClass dim = new WindowRectClass(-119, -1982, 2154, -1484);
 
-            SetWindowPos(currentProcess.MainWindowHandle, IntPtr.Zero, dim.X, dim.Y, dim.Width, dim.Height, SWP_NOZORDER);
+            HwndInterface.SetHwndPos(currentProcess.MainWindowHandle, -119, -1982);
+            HwndInterface.SetHwndSize(currentProcess.MainWindowHandle, 2154, -1484);
+
+            //SetWindowPos(currentProcess.MainWindowHandle, IntPtr.Zero, dim.X, dim.Y, dim.Width, dim.Height, SWP_NOZORDER);
         }
 
         private void ExecuteLayout(object sender, EventArgs e)
@@ -191,6 +196,8 @@ namespace Layout
             {
 
                 selectedOption = (element is RadioButton) ? ((((RadioButton)element).IsChecked == true) ? ((RadioButton)element).Content.ToString() : "") : "";
+
+
 
                 /*
                 if (element is RadioButton)
@@ -228,7 +235,7 @@ namespace Layout
 
                             Process.Start(@"" + app.Item2);
                         
-                            if (!app.Item3.Equals(null))
+                            if (app.Item3 != null)
                             {
                                 Process currentProcess = Process.GetProcessesByName(app.Item4).FirstOrDefault();
 
@@ -282,6 +289,8 @@ namespace Layout
             UncheckAllButtons();
 
             // Disable all button commands
+
+           
 
             foreach (FrameworkElement element in this.LayoutList.Children)
             {
@@ -338,6 +347,9 @@ namespace Layout
 
                 this.MainWindowBorder.Background = Brushes.White;
                 this.SoftwareTitle.Foreground = Brushes.Black;
+
+               
+
 
                 foreach (FrameworkElement element in this.LayoutList.Children)
                 {

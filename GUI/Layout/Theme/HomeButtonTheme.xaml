@@ -2,14 +2,19 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
 
-    <Style BasedOn="{StaticResource {x:Type Button}}" TargetType="Button" x:Key="HomeButtonTheme">
+    <Style BasedOn="{StaticResource {x:Type Button}}"
+           TargetType="Button"
+           x:Key="HomeButtonTheme">
 
         <Style.Setters>
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type Button}">
-                        <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
-                            <Border Background="red" Width="{TemplateBinding Property=Width}" Height="{TemplateBinding Property=Height}">
+                        <Grid VerticalAlignment="Center"
+                              HorizontalAlignment="Center">
+                            <Border Background="red"
+                                    Width="{TemplateBinding Property=Width}"
+                                    Height="{TemplateBinding Property=Height}">
 
                             </Border>
 

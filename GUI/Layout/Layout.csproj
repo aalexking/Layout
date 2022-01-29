@@ -72,7 +72,7 @@
     <TargetZone>LocalIntranet</TargetZone>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <PropertyGroup>
     <SignManifests>true</SignManifests>
@@ -123,10 +123,15 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Constants\PositioningFlags.cs" />
+    <Compile Include="Constants\WindowMessages.cs" />
     <Compile Include="Core\LayoutPreset.cs" />
     <Compile Include="Core\ObservableObject.cs" />
     <Compile Include="Core\RelayCommand.cs" />
     <Compile Include="Core\SaveSystem.cs" />
+    <Compile Include="Static\HwndInterface.cs" />
+    <Compile Include="Types\APIRECT.cs" />
+    <Compile Include="Types\HwndObject.cs" />
     <Compile Include="Core\UpdateManager.cs" />
     <Compile Include="Core\WindowRectClass.cs" />
     <Compile Include="MainWindow.xaml.cs">
@@ -229,6 +234,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="app.manifest" />
     <None Include="Layout_TemporaryKey.pfx" />
     <None Include="LICENSE" />
     <None Include="packages.config" />

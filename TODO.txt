@@ -1,0 +1,2 @@
+Make table of checkboxes of layout presets as the vertical, and when opened/close when on horizontal
+Each preset needs own table which will control which presets close and remain open and that preset is opened/closed

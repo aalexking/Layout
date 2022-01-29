@@ -5,15 +5,31 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Layout.MVM.View"
              mc:Ignorable="d" 
-             d:DesignHeight="570" d:DesignWidth="800"
+             d:DesignHeight="570"
+             d:DesignWidth="800"
              Background="Transparent">
 
-    <Border Background="#36334d" CornerRadius="5" Name="HomeViewBorder">
+    <Border Background="#36334d"
+            CornerRadius="5"
+            Name="HomeViewBorder">
 
         <StackPanel>
-            <Image Source="/Images/icon_orange.png" Width="200" HorizontalAlignment="Center" Margin="0,50,0,0"/>
-            <TextBlock Name="Text1" Text="To create a new layout, select the 'Create New' button." HorizontalAlignment="Center" Margin="0,30,0,0" Foreground="White" FontSize="20"/>
-            <TextBlock Name="Text2" Text="To run a layout, just select the name of the layout on the left." HorizontalAlignment="Center" Margin="0,10,0,0" Foreground="White" FontSize="20"/>
+            <Image Source="/Images/icon_orange.png"
+                   Width="200"
+                   HorizontalAlignment="Center"
+                   Margin="0,50,0,0"/>
+            <TextBlock Name="Text1"
+                       Text="To create a new layout, select the 'Create New' button."
+                       HorizontalAlignment="Center"
+                       Margin="0,30,0,0"
+                       Foreground="White"
+                       FontSize="20"/>
+            <TextBlock Name="Text2"
+                       Text="To run a layout, just select the name of the layout on the left."
+                       HorizontalAlignment="Center"
+                       Margin="0,10,0,0"
+                       Foreground="White"
+                       FontSize="20"/>
         </StackPanel>
         
 

@@ -80,6 +80,11 @@ namespace Layout.Core
 
                 File.WriteAllLines(file, File.ReadAllLines(file).Where(l => !string.IsNullOrWhiteSpace(l)));
 
+
+                //string l = File.Read
+
+
+
                 List<LayoutPreset> list = new List<LayoutPreset>();
                 StreamReader jFile = new StreamReader(file);
 
@@ -93,7 +98,7 @@ namespace Layout.Core
                     
                         list.Add(JsonConvert.DeserializeObject<LayoutPreset>(line));
 
-                    
+                 
 
                 }
 

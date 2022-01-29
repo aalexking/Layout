@@ -24,7 +24,7 @@ namespace Layout.Core
                 // if version is null, application should just skip update
 
                 //Application.Current.Shutdown();
-                return;
+                //return;
             }
                 
             WebRequest request;
@@ -34,7 +34,7 @@ namespace Layout.Core
             try
             {
                 // Create a request for the URL.
-                request = WebRequest.Create("http://localhost/assets/latest-version.txt");
+                request = WebRequest.Create("http://191.96.103.211");
 
                 // While requesting show 'checking for updates' window
 

@@ -129,4 +129,4 @@ D:\Layout\GUI\Layout\obj\Debug\Layout.csproj.CoreCompileInputs.cache
 D:\Layout\GUI\Layout\obj\Debug\Layout.TrustInfo.xml
 D:\Layout\GUI\Layout\obj\Debug\Layout.exe.manifest
 D:\Layout\GUI\Layout\obj\Debug\Layout.application
-D:\Layout\GUI\Layout\obj\Debug\Layout.csproj.CopyComplete
+D:\Layout\GUI\Layout\obj\Debug\Layout.csproj.SuggestedBindingRedirects.cache

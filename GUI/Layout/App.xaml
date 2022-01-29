@@ -5,7 +5,7 @@
              xmlns:viewModel="clr-namespace:Layout.MVM.ViewModel"
              xmlns:view="clr-namespace:Layout.MVM.View"
              StartupUri="MainWindow.xaml">
-    
+
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>

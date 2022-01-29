@@ -2,7 +2,9 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
 
-    <Style BasedOn="{StaticResource {x:Type ListBox}}" TargetType="ListBox" x:Key="FilesListBoxTheme">
+    <Style BasedOn="{StaticResource {x:Type ListBox}}"
+           TargetType="ListBox"
+           x:Key="FilesListBoxTheme">
         <Style.Setters>
             <Setter Property="Template">
                 <Setter.Value>

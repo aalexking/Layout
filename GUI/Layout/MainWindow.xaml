@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:viewModel="clr-namespace:Layout.MVM.ViewModel"
         xmlns:local="clr-namespace:Layout"
-        xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" x:Class="Layout.MainWindow"
+        xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation"
+        x:Class="Layout.MainWindow"
         mc:Ignorable="d"
         Height="600" Width="920"
         WindowStyle="None"
@@ -21,9 +22,13 @@
         <viewModel:MainViewModel/>
     </Window.DataContext>
 
-    <Border Background="#272537" CornerRadius="5" x:Name="MainWindowBorder">
+    <Border Background="#272537"
+            CornerRadius="5"
+            x:Name="MainWindowBorder">
 
-        <Grid Background="Transparent" x:Name="MainWindowGrid" PreviewMouseLeftButtonDown="Window_MouseDown">
+        <Grid Background="Transparent"
+              x:Name="MainWindowGrid"
+              PreviewMouseLeftButtonDown="Window_MouseDown">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="200"/>
                 <ColumnDefinition/>
@@ -38,7 +43,8 @@
             </Grid.RowDefinitions>
             -->
 
-            <Grid Grid.Column="0" x:Name="MainLeftGrid">
+            <Grid Grid.Column="0"
+                  x:Name="MainLeftGrid">
 
                 <Grid.RowDefinitions>
                     <RowDefinition Height="70"/>
@@ -47,33 +53,86 @@
                 </Grid.RowDefinitions>
 
 
-                <StackPanel Orientation="Horizontal" Grid.Row="0" Margin="0,10,0,0">
-                    <Image Grid.Column="0" Grid.Row="0" Margin="30,0,0,0" Width="50" Height="50" Grid.RowSpan="2" Source="/Images/icon_orange.png"/>
-                    <TextBlock x:Name="SoftwareTitle" Text="Layout" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" FontSize="30" Margin="0,0,0,0" Height="40" Width="89"/>
+                <StackPanel Orientation="Horizontal"
+                            Grid.Row="0"
+                            Margin="0,10,0,0">
+                    <Image Grid.Column="0"
+                           Grid.Row="0"
+                           Margin="30,0,0,0"
+                           Width="50"
+                           Height="50"
+                           Grid.RowSpan="2"
+                           Source="/Images/icon_orange.png"/>
+                    <TextBlock x:Name="SoftwareTitle"
+                               Text="Layout"
+                               VerticalAlignment="Center"
+                               HorizontalAlignment="Center"
+                               Foreground="White"
+                               FontSize="30"
+                               Margin="0,0,0,0"
+                               Height="40"
+                               Width="89"/>
                 </StackPanel>
 
-                <Button x:Name="HomeButton" Grid.Row="0" Grid.Column="0" Command="{Binding HomeViewCommand}" Width="auto" Height="auto" Opacity="0" Click="HomeButton_Click"/>
+                <Button x:Name="HomeButton"
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Command="{Binding HomeViewCommand}"
+                        Width="auto"
+                        Height="auto"
+                        Opacity="0"
+                        Click="HomeButton_Click"/>
 
-                <ScrollViewer VerticalAlignment="Top" Grid.Row="1" Grid.Column="0" Margin="0,0,0,0" Grid.RowSpan="2" Height="390" x:Name="LayoutListScroller">
+                <ScrollViewer VerticalAlignment="Top"
+                              Grid.Row="1"
+                              Grid.Column="0"
+                              Margin="0,0,0,0"
+                              Grid.RowSpan="2"
+                              Height="390"
+                              x:Name="LayoutListScroller">
 
-                    <StackPanel x:Name="LayoutList" x:FieldModifier="public"/>
+                    <StackPanel x:Name="LayoutList"
+                                x:FieldModifier="public"/>
                 </ScrollViewer>
 
 
 
-                <Button x:Name="CreateNewButton" Grid.Row="2" VerticalAlignment="Top" Margin="0,5,0,0" HorizontalAlignment="Right" Width="190" Height="50" Style="{StaticResource CreateNewButtonTheme}" Command="{Binding CreateNewViewCommand}" Content="Create New" Click="CreateNewButton_Clicked"/>
-                <Button x:Name="EditLayoutButton" Grid.Row="2" VerticalAlignment="Bottom" Margin="0,0,0,0" HorizontalAlignment="Right" Width="190" Height="50" Style="{StaticResource EditLayoutButtonTheme}" Command="{Binding EditLayoutViewCommand}" Content="Edit Layout" Click="EditLayoutButton_Click"/>
+                <Button x:Name="CreateNewButton"
+                        Grid.Row="2"
+                        VerticalAlignment="Top"
+                        Margin="0,5,0,0"
+                        HorizontalAlignment="Right"
+                        Width="190"
+                        Height="50"
+                        Style="{StaticResource CreateNewButtonTheme}"
+                        Command="{Binding CreateNewViewCommand}"
+                        Content="Create New"
+                        Click="CreateNewButton_Clicked"/>
+                <Button x:Name="EditLayoutButton"
+                        Grid.Row="2"
+                        VerticalAlignment="Bottom"
+                        Margin="0,0,0,0"
+                        HorizontalAlignment="Right"
+                        Width="190" 
+                        Height="50"
+                        Style="{StaticResource EditLayoutButtonTheme}"
+                        Command="{Binding EditLayoutViewCommand}"
+                        Content="Edit Layout"
+                        Click="EditLayoutButton_Click"/>
 
             </Grid>
 
-            <Grid Grid.Column="1" x:Name="MainRightGrid">
+            <Grid Grid.Column="1"
+                  x:Name="MainRightGrid">
 
                 <Grid.RowDefinitions>
                     <RowDefinition Height="30"/>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
                 
-                <ContentControl Grid.Row="1" Margin="10,0,10,10" Content="{Binding CurrentView}"/>
+                <ContentControl Grid.Row="1"
+                                Margin="10,0,10,10"
+                                Content="{Binding CurrentView}"/>
                 
                 
                 
@@ -95,32 +154,78 @@
             
 
 
-            <StackPanel Panel.ZIndex="10" Orientation="Horizontal" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Right">
+            <StackPanel Panel.ZIndex="10"
+                        Orientation="Horizontal"
+                        Grid.Column="1"
+                        Grid.Row="0"
+                        HorizontalAlignment="Right">
                 <!--
                 <RadioButton Name="SettingsButton" Style="{StaticResource SettingsButtonTheme}" Width="25" Margin="0,0,0,0"/>
                 <RadioButton Name="CloseButton" Content="X" Style="{StaticResource CloseButtonTheme}" Foreground="White" Margin="3,0,3,0" Width="30" Height="28" VerticalAlignment="top" FontWeight="Bold" FontSize="28"/>
                 -->
 
                 <!--Put both of these in button tags so that hover and onclick highlighting can be implemented-->
-                <Image  x:Name="SettingsButton" Source="/Images/settings_white.png" Width="30" Margin="0,0,3,0" HorizontalAlignment="Center" VerticalAlignment="Top"  Height="19" Visibility="Visible"/>
-                <TextBlock x:Name="CloseButton" Text="X" Foreground="white" FontSize="20" FontWeight="Bold" Margin="0,0,3,0" Width="25" TextAlignment="Center"/>
+                <Image  x:Name="SettingsButton"
+                        Source="/Images/settings_white.png"
+                        Width="30" Margin="0,0,3,0"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Top" 
+                        Height="19"
+                        Visibility="Visible"/>
+                <TextBlock x:Name="CloseButton"
+                           Text="X"
+                           Foreground="white"
+                           FontSize="20"
+                           FontWeight="Bold"
+                           Margin="0,0,3,0"
+                           Width="25"
+                           TextAlignment="Center"/>
 
             </StackPanel>
 
 
-            <Border x:Name="SettingsMenu" CornerRadius="5" Background="Wheat" Grid.Column="1" Height="200" Width="150" Margin="527,4,43,396" Grid.RowSpan="2" Visibility="Hidden">
-                <Canvas  Background="Transparent" Grid.Column="1" HorizontalAlignment="Left" Margin="0,0,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Panel.ZIndex="1">
+            <Border x:Name="SettingsMenu"
+                    CornerRadius="5"
+                    Background="Wheat"
+                    Grid.Column="1"
+                    Height="200"
+                    Width="150"
+                    Margin="527,4,43,396"
+                    Grid.RowSpan="2"
+                    Visibility="Hidden">
+                <Canvas  Background="Transparent"
+                         Grid.Column="1"
+                         HorizontalAlignment="Left"
+                         Margin="0,0,0,0"
+                         Grid.RowSpan="2"
+                         VerticalAlignment="Top"
+                         Panel.ZIndex="1">
 
                     <StackPanel>
 
-                        <TextBlock Text="Click to Change" FontSize="5" Foreground="White" Margin="78,30,0,0"/>
-                        <StackPanel Orientation="Horizontal" Margin="30,0,0,0">
+                        <TextBlock Text="Click to Change"
+                                   FontSize="5"
+                                   Foreground="White"
+                                   Margin="78,30,0,0"/>
+                        <StackPanel Orientation="Horizontal"
+                                    Margin="30,0,0,0">
 
-                            <TextBlock Text="Theme:" FontSize="15" FontWeight="Bold" Foreground="White"/>
+                            <TextBlock Text="Theme:"
+                                       FontSize="15"
+                                       FontWeight="Bold"
+                                       Foreground="White"/>
 
 
-                            <Border x:Name="LightThemeBorder" Background="White" CornerRadius="3" Width="40" Margin="5,0,0,0" PreviewMouseLeftButtonDown="ToggleTheme">
-                                <TextBlock x:Name="LightThemeLabel" Text="Light" TextAlignment="Center" VerticalAlignment="Center"/>
+                            <Border x:Name="LightThemeBorder"
+                                    Background="White"
+                                    CornerRadius="3"
+                                    Width="40"
+                                    Margin="5,0,0,0"
+                                    PreviewMouseLeftButtonDown="ToggleTheme">
+                                <TextBlock x:Name="LightThemeLabel"
+                                           Text="Light"
+                                           TextAlignment="Center"
+                                           VerticalAlignment="Center"/>
                             </Border>
 
 
@@ -132,8 +237,28 @@
                 </Canvas>
             </Border>
 
-            <TextBlock Name="t1" Foreground="white"  Grid.Column="1" HorizontalAlignment="Left" Height="15" Margin="30,10,0,0" TextWrapping="Wrap" Text="Current: " VerticalAlignment="Top" Width="103" Visibility="Hidden"/>
-            <TextBlock Name="t2" Foreground="white" Grid.Column="1" HorizontalAlignment="Left" Height="16" Margin="216,9,0,0" TextWrapping="Wrap" Text="Latest: " VerticalAlignment="Top" Width="155" Visibility="Hidden"/>
+            <TextBlock Name="t1"
+                       Foreground="white" 
+                       Grid.Column="1"
+                       HorizontalAlignment="Left"
+                       Height="15"
+                       Margin="30,10,0,0"
+                       TextWrapping="Wrap"
+                       Text="Current: "
+                       VerticalAlignment="Top"
+                       Width="103"
+                       Visibility="Hidden"/>
+            <TextBlock Name="t2"
+                       Foreground="white"
+                       Grid.Column="1"
+                       HorizontalAlignment="Left"
+                       Height="16"
+                       Margin="216,9,0,0"
+                       TextWrapping="Wrap"
+                       Text="Latest: "
+                       VerticalAlignment="Top"
+                       Width="155"
+                       Visibility="Hidden"/>
 
 
 
