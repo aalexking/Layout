@@ -245,6 +245,12 @@ namespace Layout
                             (string, string, WindowRectClass, string) app = preset.GetApps()[j];
 
                             Process.Start(@"" + app.Item2);
+
+                            // Possibly need to sleep here as windows are opening after moving
+
+                            //TODO: Capturing applications needs to capture file too (E.g. vscode)
+
+                            // TODO: Improve GUI, complete makeover necessary, looking ugly af
                         
                             if (app.Item3 != null)
                             {
