@@ -19,6 +19,7 @@ using System.Runtime.InteropServices;
 using System.Management;
 using Layout.Static;
 
+
 namespace Layout
 {
     /// <summary>
@@ -89,7 +90,31 @@ namespace Layout
                         if (this.SettingsButton.Visibility.Equals(Visibility.Visible))
                         {
                             //SettingsButton_Clicked();
-                            test();
+
+                            Process currentProcess = Process.GetProcessesByName("OUTLOOK").FirstOrDefault();
+
+                            Console.WriteLine(currentProcess.MainWindowHandle);
+
+
+                            //HwndInterface.SetHwndPos(263480, 0, 0);
+                            //HwndInterface.SetHwndSize(currentProcess.MainWindowHandle, 1000, 1000);
+
+                            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                             return;
                         }
                         
@@ -170,20 +195,6 @@ namespace Layout
 
         }
 
-        void test()
-        {
-            Console.WriteLine("test");
-
-            Process currentProcess = Process.GetProcessesByName("chrome").FirstOrDefault();
-
-            WindowRectClass dim = new WindowRectClass(-119, -1982, 2154, -1484);
-
-            HwndInterface.SetHwndPos(currentProcess.MainWindowHandle, -119, -1982);
-            HwndInterface.SetHwndSize(currentProcess.MainWindowHandle, 2154, -1484);
-
-            //SetWindowPos(currentProcess.MainWindowHandle, IntPtr.Zero, dim.X, dim.Y, dim.Width, dim.Height, SWP_NOZORDER);
-        }
-
         private void ExecuteLayout(object sender, EventArgs e)
         {
 
@@ -245,7 +256,12 @@ namespace Layout
                                     continue;
 
                                 //Console.WriteLine($"Left: {app.Item3.Left} Top: {app.Item3.Top} Right: {app.Item3.Right} Bottom: {app.Item3.Bottom}");
-                                SetWindowPos(currentProcess.MainWindowHandle, IntPtr.Zero, dim.X, dim.Y, dim.Width, dim.Height, SWP_NOZORDER);
+                                //SetWindowPos(currentProcess.MainWindowHandle, IntPtr.Zero, dim.X, dim.Y, dim.Width, dim.Height, SWP_NOZORDER);
+
+                                Console.WriteLine("Enter");
+
+                                HwndInterface.SetHwndPos(currentProcess.MainWindowHandle, dim.X, dim.Y);
+                                HwndInterface.SetHwndSize(currentProcess.MainWindowHandle, dim.Width, dim.Height);
                             
                             }
                         }

@@ -118,14 +118,12 @@ namespace Layout.MVM.View
                                 {
                                     string fileName = file.Substring(indx+1);
 
-                                    (string, string, WindowRectClass, string) app;
+                                    (string, string, WindowRectClass, string) app = (null, null, null, null);
 
                                     this.ListOfFiles.Items.Add(fileName);
 
                                     app.Item1 = fileName;
                                     app.Item2 = file;
-                                    app.Item3 = null;
-                                    app.Item4 = null;
 
                                     appsList.Add(app);
 
