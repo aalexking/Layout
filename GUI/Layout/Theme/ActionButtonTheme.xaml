@@ -10,6 +10,13 @@
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type Button}">
                         <!-- text positoning/colour -->
+                        <Border Background="Transparent">
+                            <TextBlock Text="{TemplateBinding Property=Content}"
+                                       Margin="0, 0, 0, 0"
+                                       TextAlignment="Center"
+                                       Foreground="White"/>
+                        </Border>
+
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
@@ -19,12 +26,10 @@
             
             <Trigger Property="IsMouseOver" Value="True">
                 <Setter Property="Background" Value="#1f1f1f"/>
-                <Setter Property="BorderBrush" Value="#3d3dd3d"/>
-                <Setter Property="BorderThickness" Value="1"/>
             </Trigger>
             
             <Trigger Property="IsPressed" Value="True">
-                <Setter/>
+                <!--<Setter/>-->
             </Trigger>
             
         </Style.Triggers>

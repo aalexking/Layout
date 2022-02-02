@@ -9,9 +9,12 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using Layout;
 using Layout.MVM.View;
 using Layout.MVM.ViewModel;
 using System;
+using System.Activities.Presentation;
+using System.Activities.Presentation.View;
 using System.Diagnostics;
 using System.Windows;
 using System.Windows.Automation;

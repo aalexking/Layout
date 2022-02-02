@@ -19,6 +19,7 @@
                 <ResourceDictionary Source="Theme/HomeButtonTheme.xaml"/>
                 <ResourceDictionary Source="Theme/EditLayoutButtonTheme.xaml"/>
                 <ResourceDictionary Source="Theme/SettingsTheme.xaml"/>
+                <ResourceDictionary Source="Theme/ActionButtonTheme.xaml"/>
             </ResourceDictionary.MergedDictionaries>
 
             <DataTemplate DataType="{x:Type viewModel:HomeViewModel}">
