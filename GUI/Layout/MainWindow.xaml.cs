@@ -252,6 +252,8 @@ namespace Layout
 
                             // TODO: Improve GUI, complete makeover necessary, looking ugly af
                         
+                            // TODO: Differentiating between windowed and maximised
+
                             if (app.Item3 != null)
                             {
                                 Process currentProcess = Process.GetProcessesByName(app.Item4).FirstOrDefault();

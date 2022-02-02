@@ -22,6 +22,116 @@
         <viewModel:MainViewModel/>
     </Window.DataContext>
 
+    <Border Background="#1a1a1a"
+            x:Name="MainWindoworder"
+            BorderBrush="#3d3d3d"
+            BorderThickness="1">
+
+        <Grid Background="Transparent"
+              x:Name="MainWindowGrid"
+              PreviewMouseLeftButtonDown="Window_MouseDown">
+
+            <!--
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width=""/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            -->
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+
+            <Grid Grid.Row="0"
+                  Background="#1f1f1f">
+
+                <!-- Create action buttons - close, minimise etc. And also create search bar etc for later windows -->
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="30"/> <!-- Logo Icon -->
+                    <ColumnDefinition Width="200"/> <!-- Search bar -->
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="90"/> <!-- Action buttons -->
+                </Grid.ColumnDefinitions>
+
+                <!-- Logo Icon -->
+                <Grid Grid.Row="0" Grid.Column="0">
+                    
+                    <Border BorderBrush="#3d3d3d" BorderThickness="0,0,0,1"/>
+                    
+                    
+                    
+                    
+                </Grid>
+
+                 <!-- Search Bar -->
+                <Grid Grid.Row="0" Grid.Column="1">
+
+                    <Border BorderBrush="#3d3d3d" BorderThickness="0,0,0,1"/>
+
+
+
+
+                </Grid>
+
+                <!-- Empty space -->
+                <Grid Grid.Row="0" Grid.Column="2">
+
+                    <Border BorderBrush="#3d3d3d"
+                            BorderThickness="0,0,0,1"/>
+
+
+
+
+                </Grid>
+
+                <!-- Action buttons -->
+                <Grid Grid.Row="0"
+                      Grid.Column="3">
+
+                    <Border BorderBrush="#3d3d3d"
+                            BorderThickness="0,0,0,1"/>
+
+                    <StackPanel Orientation="Horizontal">
+                        <!-- minismise -->
+                        <Button Width="30"
+                                Height="20"
+                                Background="Transparent"
+                                Click=""
+                                Content="-"
+                                Style="{StaticResource ActionButtonTheme}"/>
+                        <!-- full screen -->
+                        <Button Width="30"
+                                Height="20"
+                                Background="Transparent"
+                                Click=""
+                                Content="o"
+                                Style="{StaticResource ActionButtonTheme}"/>
+                        <!-- close -->
+                        <Button Width="30"
+                                Height="20"
+                                Background="Transparent"
+                                Click=""
+                                Content="x"
+                                Style="{StaticResource ActionButtonTheme}"/>
+                    </StackPanel>
+
+                </Grid>
+
+
+
+            </Grid>
+
+        </Grid>
+
+    </Border>
+
+
+
+
+    <!--
     <Border Background="#272537"
             CornerRadius="5"
             x:Name="MainWindowBorder">
@@ -36,12 +146,12 @@
             </Grid.ColumnDefinitions>
 
 
-            <!--
+            
             <Grid.RowDefinitions>
                 <RowDefinition Height="30"/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            -->
+            
 
             <Grid Grid.Column="0"
                   x:Name="MainLeftGrid">
@@ -159,12 +269,12 @@
                         Grid.Column="1"
                         Grid.Row="0"
                         HorizontalAlignment="Right">
-                <!--
+                
                 <RadioButton Name="SettingsButton" Style="{StaticResource SettingsButtonTheme}" Width="25" Margin="0,0,0,0"/>
                 <RadioButton Name="CloseButton" Content="X" Style="{StaticResource CloseButtonTheme}" Foreground="White" Margin="3,0,3,0" Width="30" Height="28" VerticalAlignment="top" FontWeight="Bold" FontSize="28"/>
-                -->
+                
 
-                <!--Put both of these in button tags so that hover and onclick highlighting can be implemented-->
+                Put both of these in button tags so that hover and onclick highlighting can be implemented
                 <Image  x:Name="SettingsButton"
                         Source="/Images/settings_white.png"
                         Width="30" Margin="0,0,3,0"
@@ -272,5 +382,6 @@
 
 
     </Border>
+    -->
 
 </Window>
