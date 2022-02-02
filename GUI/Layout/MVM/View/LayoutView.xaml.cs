@@ -69,7 +69,7 @@ namespace Layout.MVM.View
             List<LayoutPreset> presets = SaveSystem.LoadPresets();
 
             string selectedLayout = "";
-
+            /*
             foreach (FrameworkElement element in ((MainWindow)System.Windows.Application.Current.MainWindow).LayoutList.Children)
             {
                 // (test.Name);
@@ -88,7 +88,7 @@ namespace Layout.MVM.View
                 
 
             }
-
+            */
             this.LayoutNameInput.Text = selectedLayout;
 
             List<(string, string, WindowRectClass, string)> apps = new List<(string, string, WindowRectClass, string)>();
@@ -258,11 +258,11 @@ namespace Layout.MVM.View
 
                 // Once layout saved, program should exit create new screen and enter the new layout in the stack panel list
 
-                ((MainWindow)System.Windows.Application.Current.MainWindow).UpdateExistingLayout(input, oldLayoutName);
+                //((MainWindow)System.Windows.Application.Current.MainWindow).UpdateExistingLayout(input, oldLayoutName);
 
-                ((MainWindow)System.Windows.Application.Current.MainWindow).HomeButton.Command.Execute(this);
+                //((MainWindow)System.Windows.Application.Current.MainWindow).HomeButton.Command.Execute(this);
 
-                ((MainWindow)System.Windows.Application.Current.MainWindow).AssignAllButtonCommands();
+                //((MainWindow)System.Windows.Application.Current.MainWindow).AssignAllButtonCommands();
             }
 
         }
@@ -279,7 +279,7 @@ namespace Layout.MVM.View
             if (overwrite)
             {
                 selectedPosition = 0;
-
+                /*
                 foreach (FrameworkElement element in ((MainWindow)System.Windows.Application.Current.MainWindow).LayoutList.Children)
                 {
                     // (test.Name);
@@ -299,6 +299,7 @@ namespace Layout.MVM.View
                     selectedPosition++;
 
                 }
+                */
             }
 
 
@@ -338,7 +339,7 @@ namespace Layout.MVM.View
         {
             // Insert values to list box, and input box
             List<LayoutPreset> presets = SaveSystem.LoadPresets();
-
+            /*
             foreach (FrameworkElement element in ((MainWindow)System.Windows.Application.Current.MainWindow).LayoutList.Children)
             {
                 // (test.Name);
@@ -367,6 +368,7 @@ namespace Layout.MVM.View
                 }
 
             }
+            */
 
         }
 
@@ -387,11 +389,11 @@ namespace Layout.MVM.View
 
                 // Once layout saved, program should exit create new screen and enter the new layout in the stack panel list
 
-                ((MainWindow)System.Windows.Application.Current.MainWindow).CreateNewLayoutSection(newPreset);
+                //((MainWindow)System.Windows.Application.Current.MainWindow).CreateNewLayoutSection(newPreset);
 
-                ((MainWindow)System.Windows.Application.Current.MainWindow).HomeButton.Command.Execute(this);
+                //((MainWindow)System.Windows.Application.Current.MainWindow).HomeButton.Command.Execute(this);
 
-                ((MainWindow)System.Windows.Application.Current.MainWindow).AssignAllButtonCommands();
+                //((MainWindow)System.Windows.Application.Current.MainWindow).AssignAllButtonCommands();
 
 
             }

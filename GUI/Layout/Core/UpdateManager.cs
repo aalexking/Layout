@@ -91,7 +91,7 @@ namespace Layout.Core
 
             if (System.Deployment.Application.ApplicationDeployment.IsNetworkDeployed)
             {
-                ((MainWindow)System.Windows.Application.Current.MainWindow).t1.Text += System.Deployment.Application.ApplicationDeployment.CurrentDeployment.CurrentVersion.ToString();
+                //((MainWindow)System.Windows.Application.Current.MainWindow).t1.Text += System.Deployment.Application.ApplicationDeployment.CurrentDeployment.CurrentVersion.ToString();
                 Console.WriteLine(System.Deployment.Application.ApplicationDeployment.CurrentDeployment.CurrentVersion.ToString());
                 return System.Deployment.Application.ApplicationDeployment.CurrentDeployment.CurrentVersion.ToString();
             }

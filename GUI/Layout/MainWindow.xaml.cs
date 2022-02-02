@@ -38,6 +38,7 @@ namespace Layout
         private const int SWP_NOZORDER = 0x0004;
         private const int SWP_SHOWWINDOW = 0x0040;
         */
+        /*
         private bool darkTheme = true;
 
         public MainWindow()
@@ -191,7 +192,7 @@ namespace Layout
                 }
 
             }
-            */
+            
 
         }
 
@@ -222,7 +223,7 @@ namespace Layout
 
 
                 }
-                */
+                
             }
 
             List<LayoutPreset> apps = SaveSystem.LoadPresets();
@@ -295,7 +296,7 @@ namespace Layout
 
 
                         }
-                        */
+                        
 
                     }
 
@@ -362,6 +363,7 @@ namespace Layout
 
             if (darkTheme)
             {
+                /*
                 darkTheme = !darkTheme;
 
                 // Activate light theme
@@ -383,25 +385,25 @@ namespace Layout
                     
                 }
 
-              
+                
                 //((MainWindow)System.Windows.Application.Current.).HomeButton.Command.Execute(this);
 
             }
             else
             {
                 darkTheme = !darkTheme;
-
+                /*
                 // Active dark theme
                 this.LightThemeLabel.Text = "Dark";
                 this.LightThemeLabel.Foreground = Brushes.White;
                 this.LightThemeBorder.Background = Brushes.Black;
-
+                
             }
         }
 
         private void CloseButton_Clicked()
         {
-            this.Close();
+            //this.Close();
 
         }
 
@@ -410,7 +412,7 @@ namespace Layout
 
             // Display Settings Box
 
-            this.SettingsMenu.Visibility = this.SettingsMenu.Visibility.Equals(Visibility.Hidden) ? Visibility.Visible : Visibility.Hidden;
+            //this.SettingsMenu.Visibility = this.SettingsMenu.Visibility.Equals(Visibility.Hidden) ? Visibility.Visible : Visibility.Hidden;
 
 
         }
@@ -431,9 +433,9 @@ namespace Layout
         {
 
         }
-
+        */
     }
-
+        
 
 
 }

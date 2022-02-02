@@ -28,8 +28,7 @@
             BorderThickness="1">
 
         <Grid Background="Transparent"
-              x:Name="MainWindowGrid"
-              PreviewMouseLeftButtonDown="Window_MouseDown">
+              x:Name="MainWindowGrid">
 
             <!--
             <Grid.ColumnDefinitions>
@@ -91,7 +90,7 @@
                 <Grid Grid.Row="0"
                       Grid.Column="3">
 
-                    <Border BorderBrush="#3d3d3d"
+                    <Border BorderBrush="#3a3a3a"
                             BorderThickness="0,0,0,1"/>
 
                     <StackPanel Orientation="Horizontal">
@@ -99,21 +98,21 @@
                         <Button Width="30"
                                 Height="20"
                                 Background="Transparent"
-                                Click=""
+                                
                                 Content="-"
                                 Style="{StaticResource ActionButtonTheme}"/>
                         <!-- full screen -->
                         <Button Width="30"
                                 Height="20"
                                 Background="Transparent"
-                                Click=""
+                                
                                 Content="o"
                                 Style="{StaticResource ActionButtonTheme}"/>
                         <!-- close -->
                         <Button Width="30"
                                 Height="20"
                                 Background="Transparent"
-                                Click=""
+                                
                                 Content="x"
                                 Style="{StaticResource ActionButtonTheme}"/>
                     </StackPanel>
@@ -122,6 +121,10 @@
 
 
 
+            </Grid>
+
+            <Grid Grid.Row="1">
+                
             </Grid>
 
         </Grid>

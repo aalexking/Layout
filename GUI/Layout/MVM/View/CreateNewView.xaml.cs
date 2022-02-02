@@ -79,9 +79,9 @@ namespace Layout.MVM.View
 
                 // Once layout saved, program should exit create new screen and enter the new layout in the stack panel list
 
-                ((MainWindow)System.Windows.Application.Current.MainWindow).CreateNewLayoutSection(newPreset);
+                //((MainWindow)System.Windows.Application.Current.MainWindow).CreateNewLayoutSection(newPreset);
 
-                ((MainWindow)System.Windows.Application.Current.MainWindow).HomeButton.Command.Execute(this);
+                //((MainWindow)System.Windows.Application.Current.MainWindow).HomeButton.Command.Execute(this);
             }
 
         }
