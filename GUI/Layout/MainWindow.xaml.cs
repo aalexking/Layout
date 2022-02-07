@@ -28,6 +28,7 @@ namespace Layout
     /// 
 
     // TODO: Create custom file (similar to .exe) which can store LayoutPreset's and when double-clicked opens windows - Software then only has to execute files rather than manually doing it everytime
+    // TODO: When saving preset, quickly minimise layout, take screenshoot, then open layout again, so that small screenshot of window layout can be presented in gui 
     public partial class MainWindow : Window
     {
         /*
