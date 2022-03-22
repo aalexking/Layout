@@ -16,17 +16,12 @@
 
 ## Installation
 
-From Website:
-* 1
-* 2
-
-From Github:
-* 1
-* 2
+* Run [Installation Wizard]() - Installation wizard still being developed
 
 ## System Requirements
 
 * Windows 10
+* .NET Framework
 
 ## Setup
 
@@ -38,18 +33,17 @@ This software is under the [Apache License 2.0](https://github.com/aalexking/Lay
 
 ## Usage
 
+* Create new presets using specified files or by detecting currently running applications
+* Save preset to preset list
+* Run preset by double clicking in preset list
+
 ## Features
 
 * Create, copy, modify and save your layout presets
 * Saves the position and size of every application
-* 
+* Allows switching between presets with ease and without long delays
 
-
-
-Only tested with Windows 10, previous versions of windows untested
-
-Fully incompatible with other operating systems
-
-
+### Only tested with Windows 10, previous versions of windows untested
+### Incompatible with other operating systems
 
 Make README readable
