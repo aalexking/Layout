@@ -45,5 +45,3 @@ This software is under the [Apache License 2.0](https://github.com/aalexking/Lay
 
 ### Only tested with Windows 10, previous versions of windows untested
 ### Incompatible with other operating systems
-
-Make README readable
